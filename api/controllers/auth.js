@@ -44,7 +44,7 @@ export const login = (req, res) => {
       console.log(error)
       return res.status(500).json({ msg: "Aconteceu algum erro no servidor, tente novamente mais tarde!!" })
     } else if (data.length == 0) {
-      return res.status(404).json({ msg: "Usuário não encontrado!!" })
+      return res.status(404).json({ msg: "Email não encontrado!!" })
     } else {
       const user = data[0]
       const checkPassord = await bcrypt.compare(password, user.password)

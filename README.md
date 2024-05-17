@@ -21,6 +21,7 @@ Libs do Node.js utilizadas no projeto:
 - ***nodemon***
 
 Inicialização do projeto Node.js e instalação das Libs do Node.js do projeto:
+- `cd api` | abra a pasta api
 - `npm init -y` | para iniciar o ***package.json***
 - `npm i express bcrypt body-parser cors dotenv jsonwebtoken mysql2` | para instalar as libs
 - `npm i --save-dev nodemon` | para instalar lib apenas na depedência dev 
@@ -36,4 +37,10 @@ Configurando scripts que podem ser executados usando o npm:
 ---
 
 Para conseguir um TOKEN aleatório, pode utilizar esse comando:
-`node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"`
+- executar no cmd: `node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"` depois copie o retorno
+
+Inicialização do projeto Next.js e instalação das libs no front do projeto:
+- `cd client` | abra a pasta client
+- `npx create-next-app@latest` | para instalar os pacotes e dependecias do Next.js
+- `cd nomeDoProjeto` | abra a pasta do nomeDoProjeto 
+- `npm i axios` | para instalar as libs do front
