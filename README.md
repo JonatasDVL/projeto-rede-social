@@ -17,12 +17,12 @@ Libs do Node.js utilizadas no projeto:
 - ***cors***
 - ***dotenv***
 - ***jsonwebtoken***
-- ***mysql***
+- ***mysql2***
 - ***nodemon***
 
 Inicialização do projeto Node.js e instalação das Libs do Node.js do projeto:
 - `npm init -y` | para iniciar o ***package.json***
-- `npm i express bcrypt body-parser cors dotenv jsonwebtoken mysql` | para instalar as libs
+- `npm i express bcrypt body-parser cors dotenv jsonwebtoken mysql2` | para instalar as libs
 - `npm i --save-dev nodemon` | para instalar lib apenas na depedência dev 
 - `"type": "module"` | foi adicionado esse código para ter o import ao inves de require
 
@@ -34,3 +34,6 @@ Configurando scripts que podem ser executados usando o npm:
   },
 ```
 ---
+
+Para conseguir um TOKEN aleatório, pode utilizar esse comando:
+`node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"`

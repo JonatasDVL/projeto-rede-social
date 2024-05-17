@@ -1,4 +1,4 @@
-import mysql from "mysql"
+import mysql from "mysql2"
 import dotenv from "dotenv"
 
 // dotenv possibilita ler variaveis de um arquivo que tem dados sigilosos
