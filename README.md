@@ -43,4 +43,4 @@ Inicialização do projeto Next.js e instalação das libs no front do projeto:
 - `cd client` | abra a pasta client
 - `npx create-next-app@latest` | para instalar os pacotes e dependecias do Next.js
 - `cd nomeDoProjeto` | abra a pasta do nomeDoProjeto 
-- `npm i axios` | para instalar as libs do front
+- `npm i axios react-icons` | para instalar as libs do front

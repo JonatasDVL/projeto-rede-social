@@ -1,9 +1,9 @@
 "use client"
 import AuthInput from "@/components/AuthInput"
-import AuthPanel from "@/components/AuthPage"
-import axios from "axios"
+import AuthPanel from "@/app/(auth)/layout"
 import Link from "next/link"
 import { useState } from "react"
+import { makeRequest } from "../../../../axios"
 
 export default function LoginPage() {
   const [username, setUsername] = useState('')
@@ -18,7 +18,7 @@ export default function LoginPage() {
 
   function handleRegister(e: any) {
     e.preventDefault() 
-    axios.post("http://localhost:8001/api/auth/register", { username, email, password, confirmPassword })
+    makeRequest.post("auth/register", { username, email, password, confirmPassword })
       .then((res) => {
         console.log(res.data)
         setSucess(res.data.msg)
@@ -32,7 +32,7 @@ export default function LoginPage() {
   }
 
   return (
-    <AuthPanel>
+    <>
       <h1 className="font-bold text-2xl">REGISTER</h1>
       
       <AuthInput newState={setUsername} label="Nome de Usuário" id="username" type="text" />
@@ -47,6 +47,6 @@ export default function LoginPage() {
         onClick={(e) => handleRegister(e)}>CADASTRAR-SE</button>
       
       <Link href="/login" className="text-center underline hover:text-gray-800">Conecte-se</Link>
-    </AuthPanel >
+    </ >
   )
 }

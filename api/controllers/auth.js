@@ -64,7 +64,10 @@ export const login = (req, res) => {
           },
             process.env.TOKEN,
             { algorithm: "HS256" })
-          res.status(200).json({ msg: "Usuário logado com sucesso!", token, refreshToken })
+          res.status(200).json({ 
+            msg: "Usuário logado com sucesso!", 
+            data: {user, token:{token, refreshToken}}
+          })
         } catch (err) {
           console.log(err)
           return res.status(500).json({ msg: "Aconteceu algum erro no servidor, tente novamente mais tarde!!" })
